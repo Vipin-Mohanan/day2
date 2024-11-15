@@ -1,0 +1,20 @@
+<app-portfolio-nav-bar></app-portfolio-nav-bar>
+<div class="container-div">
+  <div class="left-div">
+    <h4>Hello, I'm</h4>
+    <h2>Vipin Mohanan</h2>
+  </div>
+
+  <div class="right-div">
+    <img src="../../images/portfolio/Media (2) 1.png" alt="">
+  </div>
+</div>
+<app-portfolio-heading-section title="About"></app-portfolio-heading-section>
+<app-portfolio-description></app-portfolio-description>
+<app-portfolio-heading-section title="Academics"></app-portfolio-heading-section>
+<div class="card-div">
+  @for(item of collegeList; track item.id){
+    <app-portfolio-cards [data]="item"></app-portfolio-cards>
+  }
+  </div>
+

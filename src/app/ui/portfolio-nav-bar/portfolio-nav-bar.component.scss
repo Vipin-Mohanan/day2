@@ -1,0 +1,17 @@
+ul{
+  list-style: none;
+  display: flex;
+  background-color: rgb(88, 161, 0);
+  justify-content: right;
+  gap:40px;
+  align-items: center;
+  height: 10vh;
+  color: white;
+  padding: 10px;
+}
+
+li{
+  cursor: pointer;
+}
+
+

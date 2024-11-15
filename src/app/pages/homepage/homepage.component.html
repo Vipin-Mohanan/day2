@@ -1,0 +1,20 @@
+
+<div id="carouselExampleSlidesOnly" class="carousel slide" data-bs-ride="carousel">
+  <div class="carousel-inner">
+      @for (item of CarouselList; track item.id) {
+        <app-carousel [carouseldata]="item"></app-carousel>
+        }
+  </div>
+</div>
+
+
+<app-description></app-description>
+
+
+
+<div class="card-div">
+@for(item of cardList; track item.id){
+  <app-cards [data]="item"></app-cards>
+}
+</div>
+

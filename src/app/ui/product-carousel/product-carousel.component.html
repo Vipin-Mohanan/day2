@@ -1,0 +1,10 @@
+<owl-carousel-o [options]="customOptions">
+      @for (product of product; track product.id) {
+        <ng-template carouselSlide [id]="product.id">
+          <app-product-card [data]="product"></app-product-card>
+        </ng-template>
+      }
+</owl-carousel-o>
+
+
+
