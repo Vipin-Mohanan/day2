@@ -1,0 +1,17 @@
+h1{
+  text-align: center;
+}
+
+.form-container{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+label{
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  padding: 10px;
+  margin: 20px;
+  justify-content: space-evenly;
+}

@@ -31,4 +31,9 @@ export interface academics{
   schoolname:string
 }
 
+export interface validation{
+  email:string,
+  password:string
+}
+
 

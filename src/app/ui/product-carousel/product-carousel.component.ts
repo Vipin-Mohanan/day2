@@ -37,6 +37,7 @@ export class ProductCarouselComponent {
   categories:any=[]
 
   @Input() cat:any=[]
+
   ngOnInit(){
     this.api.getCategoryById(this.cat).subscribe((res:any)=>{
       this.product=res

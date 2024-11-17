@@ -1,0 +1,43 @@
+<!-- TEMPLATE DRIVEN FORMS
+<form action="" #myForm="ngForm" (ngSubmit)="onSubmit(myForm)">
+  <label for="email">Email<input type="email" name="email" ngModel></label>
+  <label for="password">Password<input type="password" name="password" ngModel></label>
+  <button>Submit</button>
+</form> -->
+
+<!-- REACTIVE FORMS
+
+<form [formGroup]="LoginForm" (ngSubmit)="onClick()">
+  <label for="email">Email<input type="email" name="email" formControlName="email"></label>
+  <label for="password">Password<input type="password" name="password" formControlName="password"></label>
+  <button>Submit</button>
+</form> -->
+
+
+<h1>Registration Form</h1>
+<div class="form-container">
+  <form [formGroup]="RegistrationForm" (ngSubmit)="onEnter()">
+    <label for="firstname">First Name: <input type="text" placeholder="Enter your first name"  formControlName="firstname"></label>
+    <label for="lastname">Last Name: <input type="text" placeholder="Enter your last name" name="lastname" formControlName="lastname"></label>
+    <label for="dob">Date of Birth: <input type="date" name="dob" placeholder="Enter your date of birth" formControlName="dob"></label>
+    <label for="email">Email: <input type="email" name="email" placeholder="Enter your email" formControlName="email"></label>
+    <label for="phoneno">Phone No: <input type="number" name="phoneno" placeholder="Enter your Phone no" formControlName="phoneno"></label>
+    <label for="gender">Gender:
+      <select name="gender" formControlName="gender" >
+        <option value="male">Male</option>
+        <option value="female">Female</option>
+      </select>
+    </label>
+    <label for="address">Address: <input type="text" name="address" formControlName="address"></label>
+    <label for="pincode" (keyup)="pinCheck()">PinCode: <input type="text" name="pincode" formControlName="pincode"></label>
+    <label for="taluk">Taluk: <input type="text" name="taluk" formControlName="taluk"> </label>
+    <label for="district">District: <input type="text" name="district" formControlName="district"> </label>
+    <label for="state">State Name: <input type="text" name="state" formControlName="state"> </label>
+
+    <app-my-button title="Submit" color="green" textColor="white"></app-my-button>
+  </form>
+</div>
+
+
+
+

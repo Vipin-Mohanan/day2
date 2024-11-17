@@ -1,0 +1,23 @@
+<div class="container">
+  <div class="row">
+    <div class="col">
+      <img src="{{data.image}}" height="300px" width="250px" alt="">
+    </div>
+    <div class="col">
+      <div class="title">{{data.title}}</div>
+      <div class="description">{{data.description}}</div>
+      <div class="price">${{data.price}}</div>
+      <div>rating:{{data.rating.rate}}</div>
+
+
+      @for (item of [].constructor(fullstar); track item)
+      {
+        <i class="bi bi-star-fill"></i>
+      }
+
+      @if(halfstar>5){
+        <i class="bi bi-star-half"></i>
+      }
+    </div>
+  </div>
+</div>
