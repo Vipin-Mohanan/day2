@@ -3,6 +3,7 @@ import { CarouselComponent } from "../../ui/carousel/carousel.component";
 import { DescriptionComponent } from "../description/description.component";
 import { CardsComponent } from "../../ui/cards/cards.component";
 
+
 @Component({
   selector: 'app-homepage',
   standalone: true,
@@ -115,4 +116,6 @@ export class HomepageComponent {
       imageLink: "../../images/Media (20).jpg"
     }
   ]
+
+
 }

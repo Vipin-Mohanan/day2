@@ -36,4 +36,15 @@ export interface validation{
   password:string
 }
 
+export interface filteredData{
+  officeName: string,
+  pincode:string,
+  taluk:string,
+  districtName:string,
+  stateName:string
+
+}
+
+
+
 

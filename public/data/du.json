@@ -1,0 +1,86 @@
+[
+  {
+    "id": 1,
+    "name": "Agile Development",
+    "desc": "Iterative and incremental development approach focusing on customer collaboration and flexibility.",
+    "image": "https://media.gettyimages.com/id/1993704307/photo/robotic-arm-in-smart-distribution-warehouse.jpg?s=612x612&w=gi&k=20&c=-RSGMHs7CbdAZ0QPBY0kh-a5ACajz_IlapEHUDuce9g=",
+    "details": "Agile Development is a methodology that emphasizes continuous delivery, flexibility, and collaboration. It breaks projects into small, manageable iterations, enabling faster delivery and feedback.",
+    "keyFeatures": [
+      "Customer collaboration over contract negotiation",
+      "Responding to change over following a plan",
+      "Iterative development"
+    ],
+    "createdBy": "John Doe",
+    "lastUpdated": "2024-11-01"
+  },
+  {
+    "id": 2,
+    "name": "DevOps",
+    "desc": "A set of practices that automate the processes of software delivery and infrastructure management.",
+    "image": "https://media.istockphoto.com/id/1329049651/photo/happy-beautiful-technical-customer-support-specialist-having-a-headset-call-while-working-on.jpg?s=612x612&w=0&k=20&c=lTXNx4BlBLlSu4WPtAR2qXD49r811kfltKJP7NAXb9w=",
+    "details": "DevOps bridges the gap between development and operations, ensuring smooth collaboration and faster delivery cycles. It promotes continuous improvement and automation of workflows.",
+    "keyFeatures": [
+      "Continuous integration and deployment",
+      "Collaboration between teams",
+      "Automated testing and monitoring"
+    ],
+    "createdBy": "Jane Smith",
+    "lastUpdated": "2024-10-28"
+  },
+  {
+    "id": 3,
+    "name": "Continuous Integration/Continuous Delivery (CI/CD)",
+    "desc": "A set of practices that enable the rapid and reliable delivery of software.",
+    "image": "https://media.gettyimages.com/id/1195904351/photo/manager-using-his-tablet-working-in-warehouse-industry.jpg?s=612x612&w=gi&k=20&c=L7-VN-1mjrmM0uuR9vxYBDJZFK5d2XBVr39YQfCSy4A=",
+    "details": "CI/CD automates the software development process by continuously integrating code changes and delivering them to production. This ensures rapid and reliable deployment.",
+    "keyFeatures": [
+      "Automated build and testing",
+      "Quick feedback loops",
+      "Faster time to market"
+    ],
+    "createdBy": "Alice Brown",
+    "lastUpdated": "2024-11-05"
+  },
+  {
+    "id": 4,
+    "name": "Microservices Architecture",
+    "desc": "An architectural style that structures an application as a collection of loosely coupled services.",
+    "image": "https://media.gettyimages.com/id/2006117953/photo/chef-checking-stock-in-storage-room.jpg?s=170667a&w=gi&k=20&c=36KagEKetLmhfH-YwfOStHmJaoTiI4JRdgVDcv0tpBU=",
+    "details": "Microservices architecture breaks down applications into small, independent services. Each service focuses on a single business capability and communicates via APIs.",
+    "keyFeatures": [
+      "Scalability and flexibility",
+      "Independent deployment",
+      "Resilience and fault tolerance"
+    ],
+    "createdBy": "David Clark",
+    "lastUpdated": "2024-11-10"
+  },
+  {
+    "id": 5,
+    "name": "Cloud-Native Development",
+    "desc": "Building and running applications specifically designed for cloud environments.",
+    "image": "https://media.gettyimages.com/id/906854388/photo/male-and-female-workers-in-factory-having-a-coffee-break.jpg?s=612x612&w=gi&k=20&c=CTv32yKqOiAqNvkVChXoqhrFRh6EFwC6K-Z0oTqq78A=",
+    "details": "Cloud-native development involves leveraging cloud platforms to build scalable, reliable, and resilient applications.",
+    "keyFeatures": [
+      "Designed for cloud platforms",
+      "High scalability",
+      "Continuous deployment"
+    ],
+    "createdBy": "Sophia Johnson",
+    "lastUpdated": "2024-11-12"
+  },
+  {
+    "id": 6,
+    "name": "Test-Driven Development (TDD)",
+    "desc": "A software development process that relies on test cases to guide development.",
+    "image": "https://media.istockphoto.com/id/471633203/photo/prioritising-the-deliveries.jpg?s=612x612&w=0&k=20&c=eBwjkSqn5Ig_LtbqZ5-uTtMkt29xfGqH1Udw5-E6hf4=",
+    "details": "TDD ensures software quality by writing tests before coding. It promotes clarity in requirements and improves overall code reliability.",
+    "keyFeatures": [
+      "Test-first development",
+      "Improved code quality",
+      "Fewer bugs in production"
+    ],
+    "createdBy": "Emily White",
+    "lastUpdated": "2024-11-15"
+  }
+]

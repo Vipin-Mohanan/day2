@@ -3,11 +3,12 @@ import { PortfolioNavBarComponent } from "../../ui/portfolio-nav-bar/portfolio-n
 import { PortfolioHeadingSectionComponent } from "../../ui/portfolio-heading-section/portfolio-heading-section.component";
 import { PortfolioCardsComponent } from '../../ui/portfolio-cards/portfolio-cards.component';
 import { PortfolioDescriptionComponent } from "../portfolio-description/portfolio-description.component";
+import { NgOptimizedImage } from '@angular/common';
 
 @Component({
   selector: 'app-thirdpage',
   standalone: true,
-  imports: [PortfolioNavBarComponent, PortfolioHeadingSectionComponent, PortfolioCardsComponent, PortfolioDescriptionComponent],
+  imports: [PortfolioNavBarComponent, PortfolioHeadingSectionComponent, PortfolioCardsComponent, PortfolioDescriptionComponent, NgOptimizedImage],
   templateUrl: './thirdpage.component.html',
   styleUrl: './thirdpage.component.scss'
 })

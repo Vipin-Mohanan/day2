@@ -24,16 +24,18 @@ export class ApiService {
     return this.http.get(`https://fakestoreapi.com/products/${id}`);
   }
 
-  getPincodeData(pin: any) {
+  getPincodeData(pin: string) {
 
     return this.http.get('data/pincodes.json').pipe(
       map((data:any) => {
         // Filter the data based on the pincode
-        const filteredData = data.filter((item:any) => item.pincode === Number( pin));
+        const filteredData = data.filter((item:any) => item.pincode === Number(pin));
         return filteredData;
-
-
       })
     );
+  }
+
+  isActive():boolean{
+    return true;
   }
 }

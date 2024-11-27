@@ -1,6 +1,6 @@
 import { districts } from './../../interface/interface';
 import { Component } from '@angular/core';
-import{ FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule } from '@angular/forms';
+import{ FormControl, FormGroup, FormsModule, NgForm, ReactiveFormsModule, Validators } from '@angular/forms';
 import { validation } from '../../interface/interface';
 import { MyButtonComponent } from "../../ui/my-button/my-button.component";
 import { ApiService } from '../../api.service';
@@ -38,17 +38,19 @@ console.log(form.value);
 
    RegistrationForm =new FormGroup(
     {
-      firstname: new FormControl(' '),
-      lastname: new FormControl(' '),
-      email: new FormControl(''),
-      dob: new FormControl(' '),
-      address: new FormControl(' '),
-      phoneno: new FormControl(' '),
-      gender: new FormControl(' '),
-      pincode: new FormControl(' '),
-      taluk: new FormControl(' '),
-      district: new FormControl(' '),
-      state: new FormControl(' '),
+      firstname: new FormControl('', [Validators.required]),
+      lastname: new FormControl('', [Validators.required]),
+      email: new FormControl('', [Validators.required, Validators.email]),
+      dob: new FormControl('', Validators.required),
+      address: new FormControl('', [Validators.required, Validators.maxLength(100)]),
+      phoneno: new FormControl('', [Validators.required, Validators.pattern("^[0-9]{10}$")]),
+      gender: new FormControl('', Validators.required),
+      pincode: new FormControl('',[Validators.required, Validators.pattern("^[0-9]{6}$")]),
+      taluk: new FormControl('', Validators.required),
+      district: new FormControl('', Validators.required),
+      state: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required),
+      repeatpassword: new FormControl('', Validators.required)
 
     }
    )
@@ -64,17 +66,17 @@ pinCheck()
   {
     let pincode=this.RegistrationForm.value.pincode
 
-    if(pincode?.length==7)
-    {
-      console.log(pincode);
 
-      this.api.getPincodeData(pincode).subscribe((data:any)=>{
-        this.RegistrationForm.get('taluk')?.setValue(data[0].taluk)
-        this.RegistrationForm.get('district')?.setValue(data[0].districtName)
-        this.RegistrationForm.get('state')?.setValue(data[0].stateName)
+    if(pincode?.length==6)
+    {
+
+      this.api.getPincodeData(pincode).subscribe((res:any)=>{
+        this.RegistrationForm.get('taluk')?.setValue(res[0].taluk)
+        this.RegistrationForm.get('district')?.setValue(res[0].districtName)
+        this.RegistrationForm.get('state')?.setValue(res[0].stateName)
 
         // this.loginForm.get('district')?.setValue(data[0])
-        console.log(data[0])
+        console.log(res[0])
     })
 
     }

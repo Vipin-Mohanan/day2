@@ -43,10 +43,5 @@ export class ProductIndividualComponent {
         this.fullstar = parseInt(this.rate.toString())
         this.halfstar= this.sum%10
     })
-
-
-
-
-
   }
 }

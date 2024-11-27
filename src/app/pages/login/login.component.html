@@ -18,23 +18,152 @@
 <div class="form-container">
   <form [formGroup]="RegistrationForm" (ngSubmit)="onEnter()">
     <label for="firstname">First Name: <input type="text" placeholder="Enter your first name"  formControlName="firstname"></label>
+
+    @if (RegistrationForm.get('firstname')?.invalid && RegistrationForm.get('firstname')?.touched) {
+      <div class="alert alert-danger">
+        Please fill this field
+      </div>
+    }
+
     <label for="lastname">Last Name: <input type="text" placeholder="Enter your last name" name="lastname" formControlName="lastname"></label>
+
+    @if (RegistrationForm.get('lastname')?.invalid && RegistrationForm.get('lastname')?.touched) {
+      <div class="alert alert-danger">
+        Please fill this field
+      </div>
+    }
+
     <label for="dob">Date of Birth: <input type="date" name="dob" placeholder="Enter your date of birth" formControlName="dob"></label>
+
+    @if (RegistrationForm.get('dob')?.invalid && RegistrationForm.get('dob')?.touched) {
+      <div class="alert alert-danger">
+        Please fill this field
+      </div>
+    }
+
+
     <label for="email">Email: <input type="email" name="email" placeholder="Enter your email" formControlName="email"></label>
+
+    @if (RegistrationForm.get('email')?.invalid && RegistrationForm.get('email')?.touched) {
+      @if (RegistrationForm.get('email')?.hasError("required")) {
+        <div class="alert alert-danger">
+          Please fill this field
+        </div>
+      }
+      @if (RegistrationForm.get('email')?.hasError("email")) {
+        <div class="alert alert-danger">
+          Email format is not correct
+        </div>
+      }
+    }
+
+
+
     <label for="phoneno">Phone No: <input type="number" name="phoneno" placeholder="Enter your Phone no" formControlName="phoneno"></label>
+
+    @if (RegistrationForm.get('phoneno')?.invalid && RegistrationForm.get('phoneno')?.touched) {
+      @if (RegistrationForm.get('phoneno')?.hasError("required")) {
+        <div class="alert alert-danger">
+          Please fill this field
+        </div>
+      }
+      @if (RegistrationForm.get('phoneno')?.hasError("pattern")) {
+        <div class="alert alert-danger">
+          Phone number must have a maximum of only 10 digits
+        </div>
+      }
+
+
+    }
+
     <label for="gender">Gender:
       <select name="gender" formControlName="gender" >
         <option value="male">Male</option>
         <option value="female">Female</option>
       </select>
     </label>
-    <label for="address">Address: <input type="text" name="address" formControlName="address"></label>
+
+    @if (RegistrationForm.get('gender')?.invalid && RegistrationForm.get('gender')?.touched) {
+      <div class="alert alert-danger">
+        Please select one option
+      </div>
+    }
+
+
+    <label for="address">Address: <input type="text" name="address" formControlName="address" placeholder="Enter you address"></label>
+
+    @if (RegistrationForm.get('address')?.invalid && RegistrationForm.get('address')?.touched) {
+
+      @if(RegistrationForm.get('address')?.hasError("required"))
+      {
+        <div class="alert alert-danger">
+          Please fill this field
+        </div>
+      }
+
+      @if(RegistrationForm.get('address')?.hasError("maxlength"))
+      {
+        <div class="alert alert-danger">
+          Address must only have a character limit of 100
+        </div>
+      }
+    }
+
     <label for="pincode" (keyup)="pinCheck()">PinCode: <input type="text" name="pincode" formControlName="pincode"></label>
+
+    @if (RegistrationForm.get('pincode')?.invalid && RegistrationForm.get('pincode')?.touched) {
+
+      @if(RegistrationForm.get('pincode')?.hasError("required"))
+      {
+        <div class="alert alert-danger">
+          Please fill this field
+        </div>
+      }
+
+      @if(RegistrationForm.get('pincode')?.hasError("pattern"))
+      {
+        <div class="alert alert-danger">
+          Pincode must be a 6 digit number
+        </div>
+      }
+    }
+
+
     <label for="taluk">Taluk: <input type="text" name="taluk" formControlName="taluk"> </label>
+
+    @if (RegistrationForm.get('taluk')?.invalid && RegistrationForm.get('taluk')?.touched) {
+      <div class="alert alert-danger">
+        Please fill this field
+      </div>
+    }
     <label for="district">District: <input type="text" name="district" formControlName="district"> </label>
+
+    @if (RegistrationForm.get('district')?.invalid && RegistrationForm.get('district')?.touched) {
+      <div class="alert alert-danger">
+        Please fill this field
+      </div>
+    }
     <label for="state">State Name: <input type="text" name="state" formControlName="state"> </label>
 
-    <app-my-button title="Submit" color="green" textColor="white"></app-my-button>
+    @if (RegistrationForm.get('state')?.invalid && RegistrationForm.get('state')?.touched) {
+      <div class="alert alert-danger">
+        Please fill this field
+      </div>
+    }
+
+    <label for="password">Password: <input type="password" name="password" formControlName="password"> </label>
+
+    @if (RegistrationForm.get('password')?.invalid && RegistrationForm.get('password')?.touched) {
+      <div class="alert alert-danger">
+        Please fill this field
+      </div>
+    }
+
+    <label for="repeatpassword">Repeat Password: <input type="password" name="repeatpassword" formControlName="repeatpassword"> </label>
+
+    <!-- <app-my-button title="Submit" color="green" textColor="white" ></app-my-button> -->
+
+    <button type="submit" class="btn btn-primary" [disabled]="RegistrationForm.invalid">Submit</button>
   </form>
 </div>
 
